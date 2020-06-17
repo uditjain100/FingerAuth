@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.CancellationSignal
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog
 import kotlinx.android.synthetic.main.activity_main.*
@@ -49,7 +50,9 @@ class FingerPrintHandler() : FingerprintManager.AuthenticationCallback() {
             Toast.makeText(this.context, str, Toast.LENGTH_LONG).show()
             val btn = (context as Activity).btn_enter as Button
             val iv = (context as Activity).first_view as ImageView
+            val tv = (context as Activity).second_tv as TextView
             iv.setImageResource(R.drawable.ic_baseline_cloud_done_24)
+            tv.setText("Fingerprint Authenticated")
             MaterialStyledDialog.Builder(context)
                 .setTitle("Successful")
                 .setDescription("Authentication Successful")

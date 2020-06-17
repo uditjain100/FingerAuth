@@ -55,7 +55,7 @@
         android:layout_below="@id/first_view"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Place your finger"
+        android:text="Place your finger on Sensor"
         android:textAlignment="center"
         android:textSize="20dp"
         android:textStyle="bold" />
