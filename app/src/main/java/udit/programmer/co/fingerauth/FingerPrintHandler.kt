@@ -3,6 +3,7 @@ package udit.programmer.co.fingerauth
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.hardware.fingerprint.FingerprintManager
 import android.os.Build
 import android.os.CancellationSignal
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -60,6 +62,9 @@ class FingerPrintHandler() : FingerprintManager.AuthenticationCallback() {
                 .setPositiveText("OK")
                 .onPositive {
                     btn.isClickable = true
+                    btn.setOnClickListener {
+                        context.startActivity(Intent(this.context, BiometricActivity::class.java))
+                    }
                 }.show()
         } else Toast.makeText(this.context, str, Toast.LENGTH_LONG).show()
     }
