@@ -7,6 +7,26 @@
     android:backgroundTint="@color/BurlyWood"
     tools:context=".MainActivity">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/BurlyWood"
+        android:clickable="false"
+        android:text="Enter"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/Black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:cornerRadius="25dp"
+        app:rippleColor="@color/YellowGreen"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="4dp" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/first_view"
         android:layout_width="150dp"
@@ -27,7 +47,6 @@
         android:textColor="@color/Black"
         android:textSize="40dp"
         android:textStyle="bold" />
-
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/second_tv"

@@ -43,8 +43,5 @@ class MainActivity : AppCompatActivity() {
             }
         } else Toast.makeText(this, "Android Version Not Supported", Toast.LENGTH_LONG).show()
     }
-
-    fun changeImage(){
-        first_view.setImageResource(R.drawable.ic_baseline_cloud_done_24)
-    }
+    
 }
